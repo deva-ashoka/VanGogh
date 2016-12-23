@@ -1,0 +1,36 @@
+1. Required packages: numpy, scipy, caffe, PLT, Tkinter, opencv, matplotlib.pyplot, skimage.color, ntpath, Tkconstants, tkFileDialog
+2. Install the required packages on the PC.
+3. To color an image:
+	- Execute "gui.py": opens an application named "VANGOGH"
+	- Click browse and select the black and white image
+	- The image is colored and displayed in the application along with the black and white image
+	- To see the black and white image click "SHOW B/W" and to see the colored image click "SHOW COLOR"
+4. To color a video:
+	- Create the frames: exectue create_frames.py. This takes video file (name.mp4) as argument. 
+		(Eg: python create_frames.py video.mp4)
+		This breaks the video into frames and saves them in the folder named "frames"
+	- Color the frames: execute color_frames.py. This takes number of frames as argument. 
+		Check the number of frames in the folder "frames". 
+		(Eg: python color_frames.py 100)
+		This colors the frames that are in the folder "frames" and saves them in "colored"
+	- Get the video (colored): execute create_video.py. This takes number of frames as argument.
+		(Eg: python create_video.py 100)
+		This creates the video from the frames in the folder "colored" and saves it in "colored_videos"
+
+Resources/Citations:
+
+@article{zhang2016colorful,
+  title={Colorful Image Colorization},
+  author={Zhang, Richard and Isola, Phillip and Efros, Alexei A},
+  journal={ECCV},
+  year={2016}
+}
+
+@article{jia2014caffe,
+  Author = {Jia, Yangqing and Shelhamer, Evan and Donahue, Jeff and Karayev, Sergey and Long, Jonathan and Girshick, Ross and Guadarrama, Sergio and Darrell, Trevor},
+  Journal = {arXiv preprint arXiv:1408.5093},
+  Title = {Caffe: Convolutional Architecture for Fast Feature Embedding},
+  Year = {2014}
+}
+
+CAFFEMODEL LINK: http://eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v2/colorization_release_v2.caffemodel
